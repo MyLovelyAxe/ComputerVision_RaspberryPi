@@ -65,13 +65,6 @@ Inside venv **mediapipe**, install package `mediapipe`:
 pip install mediapipe
 ```
 
-Download the pre-trained model for pose estimation:
-
-```bash
-mkdir -p ~/ComputerVision_RaspberryPi/checkpoints
-wget -O ~/ComputerVision_RaspberryPi/checkpoints/pose_landmarker_lite.task https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/latest/pose_landmarker_lite.task
-```
-
 ## Usage
 
 Clone this repository:
@@ -89,9 +82,10 @@ mkdir checkpoints
 wget -O checkpoints/pose_landmarker_lite.task https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/latest/pose_landmarker_lite.task
 ```
 
-Run **pose estimation**:
+Run **pose estimation** in the venv **mediapipe** in a terminal:
 
 ```bash
+source ~/venvs/mediapipe/bin/activate
 cd ~/ComputerVision_RaspberryPi
 python pose_estimation.py
 ```
